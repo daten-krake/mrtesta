@@ -34,7 +34,8 @@ Order when modifying code: `go vet -> go test -> go build`.
 
 ## Architecture notes (target design — no implementation yet)
 
-- Single agent binary is the entrypoint; runs persistently on client machines.
+- Entrypoint lives in `cmd/mrtesta/main.go`. Build the agent binary with `go build -o mrtesta ./cmd/mrtesta`.
+- Single agent binary runs persistently on client machines.
 - Tests are scripts fetched from GitHub (`.ps1` / `.py`), not compiled into the agent.
 - Both PowerShell and Python execution paths must be supported (assume Windows clients for PowerShell).
 - Config on GitHub dictates what runs; agent interprets and applies it.
