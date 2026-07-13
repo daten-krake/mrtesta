@@ -22,6 +22,6 @@ jobs:
           OLLAMA_CLOUD_API_KEY: ${{ secrets.OLLAMA_CLOUD_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          model: ollama-cloud/deepseek-v4-pro
+          model: deepseek-v4-pro
           agent: reviewer
           use_github_token: true
